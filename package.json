@@ -7,7 +7,10 @@
   "author": "Arijit Das <https://github.com/arryhere>",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+    "lint": "biome lint --write ./src && biome check --write ./src",
+    "type-check": "tsc --noEmit",
+    "pre-commit": "npm run format && npm run lint && npm run type-check"
   },
   "dependencies": {
     "@apollo/server": "^4.11.3",
