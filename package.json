@@ -1,0 +1,21 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Arijit Das <https://github.com/arryhere>",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@biomejs/biome": "1.9.4",
+    "typescript": "^5.7.3"
+  }
+}
