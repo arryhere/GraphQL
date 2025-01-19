@@ -1,0 +1,29 @@
+type Role {
+  id: ID!
+  name: String!
+  desc: String!
+}
+
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+  passwordHash: String!
+  dob: String
+  verified: Boolean!
+  active: Boolean!
+  failedLoginCount: Int!
+  role: Role!
+  hoobies: [String!]!
+}
+
+# -------------------------
+
+type Query {
+  allUsers: [User!]!
+}
+
+type Mutation {
+
+}
