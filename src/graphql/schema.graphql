@@ -23,7 +23,3 @@ type User {
 type Query {
   allUsers: [User!]!
 }
-
-type Mutation {
-
-}

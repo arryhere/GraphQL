@@ -14,7 +14,7 @@ async function server() {
 
   const { url } = await startStandaloneServer(apollo_server, { listen: { port: port } });
 
-  console.log(`[server]: http://localhost:${port}`);
+  console.log(`[server]: ${url}`);
 }
 
 server();

@@ -2,7 +2,7 @@ import { db } from '../db/db.js';
 
 export const resolvers = {
   Query: {
-    allUsers() {
+    allUsers: () => {
       return db.users;
     },
   },
