@@ -37,5 +37,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "indentRainbow.includedLanguages": ["yaml", "dockercompose"]
+  "indentRainbow.includedLanguages": ["yaml", "dockercompose"],
+  "code-runner.executorMap": {
+    "typescript": "tsx",
+    "javascript": "tsx"
+  }
 }
