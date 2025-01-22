@@ -9,7 +9,7 @@ export interface IUser {
   firstName: string;
   lastName: string;
   email: string;
-  passwordHash: string;
+  password: string;
   dob: string;
   verified: boolean;
   active: boolean;
