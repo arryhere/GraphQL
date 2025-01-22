@@ -1,10 +1,12 @@
-const roles = [
+import type { IRole, IUser } from './interface.js';
+
+const roles: IRole[] = [
   { id: '5c7585ed-b5db-4aa1-ac2b-0680622a386d', name: 'SuperAdmin', desc: 'super admin role' },
   { id: 'fa5062c7-6929-4eac-8eb6-4ac8cd5e1a34', name: 'Admin', desc: 'admin role' },
   { id: '9861aaa2-e420-4124-bf17-d98994f83035', name: 'User', desc: 'user role' },
 ];
 
-const users = [
+const users: IUser[] = [
   {
     id: '9d466a83-e6fb-4ce5-81af-7d69b3e8001f',
     firstName: 'John',

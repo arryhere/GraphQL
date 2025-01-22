@@ -21,6 +21,6 @@ type User {
 # -------------------------
 
 type Query {
-  getUser(id: ID!): User!
+  getUser(id: ID!): User
   getAllUsers: [User!]!
 }
