@@ -9,7 +9,7 @@ type User {
   firstName: String!
   lastName: String!
   email: String!
-  passwordHash: String!
+  password: String!
   dob: String
   verified: Boolean!
   active: Boolean!
@@ -17,10 +17,24 @@ type User {
   role: Role!
   hoobies: [String!]!
 }
+type UpdateUserPasswordResponse {
+  message: String!
+  user: User
+}
+
+input updateUserPasswordInput {
+  id: ID!
+  oldPassword: String!
+  newPassword: String!
+}
 
 # -------------------------
 
 type Query {
-  getUser(id: ID!): User!
+  getUser(id: ID!): User
   getAllUsers: [User!]!
+}
+
+type Mutation {
+  updateUserPassword(input: updateUserPasswordInput): UpdateUserPasswordResponse
 }
