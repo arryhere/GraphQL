@@ -22,6 +22,12 @@ type UpdateUserPasswordResponse {
   user: User
 }
 
+input updateUserPasswordInput {
+  id: ID!
+  oldPassword: String!
+  newPassword: String!
+}
+
 # -------------------------
 
 type Query {
@@ -30,5 +36,5 @@ type Query {
 }
 
 type Mutation {
-  updateUserPassword(id: ID!, oldPassword: String!, newPassword: String!): UpdateUserPasswordResponse
+  updateUserPassword(input: updateUserPasswordInput): UpdateUserPasswordResponse
 }

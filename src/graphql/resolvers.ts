@@ -18,16 +18,16 @@ export const resolvers = {
   Mutation: {
     updateUserPassword: (
       parent: unknown,
-      args: { id: string; oldPassword: string; newPassword: string },
+      args: { input: { id: string; oldPassword: string; newPassword: string } },
       context: unknown
     ): {
       message: string;
       user: IUser | null;
     } => {
-      const user = db.users.find((e) => e.id === args.id);
+      const user = db.users.find((e) => e.id === args.input.id);
       if (!user) return { message: 'invalid user', user: null };
-      if (args.oldPassword !== user.password) return { message: 'invalid oldPassword', user: null };
-      return { message: 'passowrd update success', user: { ...user, password: args.newPassword } };
+      if (args.input.oldPassword !== user.password) return { message: 'invalid oldPassword', user: null };
+      return { message: 'passowrd update success', user: { ...user, password: args.input.newPassword } };
     },
   },
 
