@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "tsx watch --include ./src ./src/main.ts",
     "clean": "rm -rf ./dist",
+    "format": "biome format --write ./src",
     "lint": "biome lint --write ./src && biome check --write ./src",
     "type-check": "tsc --noEmit",
     "pre-commit": "npm run format && npm run lint && npm run type-check"
