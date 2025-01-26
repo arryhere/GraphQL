@@ -10,7 +10,14 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error"
+      }
     }
   },
   "formatter": {
@@ -18,7 +25,7 @@
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 140
+    "lineWidth": 120
   },
   "javascript": {
     "formatter": {
@@ -33,7 +40,7 @@
       "enabled": true,
       "indentStyle": "space",
       "indentWidth": 2,
-      "lineWidth": 140
+      "lineWidth": 120
     },
     "parser": {
       "allowTrailingCommas": true,
